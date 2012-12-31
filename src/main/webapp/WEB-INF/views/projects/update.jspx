@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_tasawr_standupmanager_domain_Project" modelAttribute="project" path="/projects" versionField="Version" z="4hiVPu3z5etYwM/8fE9psf8MU3g=">
+        <field:input field="name" id="c_com_tasawr_standupmanager_domain_Project_name" z="NKAlu6WcRNnncXNUMPLRnFrQBtM="/>
+        <field:textarea field="description" id="c_com_tasawr_standupmanager_domain_Project_description" z="d4NT4z2A4Bgbmq7fPfh72HAX4es="/>
+        <field:select field="involved_employees" id="c_com_tasawr_standupmanager_domain_Project_involved_employees" itemValue="id" items="${employees}" multiple="true" path="/employees" z="orzTeQKClKHuMgF9D4vrfps1hwY="/>
+    </form:update>
+</div>

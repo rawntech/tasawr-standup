@@ -1,0 +1,34 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-30 15:08:43
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-30 16:29:59
+project --topLevelPackage com.tasawr.standupmanager --projectName standupmanager
+jpa setup --database MYSQL --provider HIBERNATE --databaseName tswr_standupmanager --userName root --password 
+// [failed] entity jpa --class ~.domain.user --testAutomatically 
+entity jpa --class ~.domain.employee --testAutomatically 
+field string --fieldName name --sizeMax 50
+field string --fieldName email --sizeMax 50
+field string --fieldName designation --sizeMax 50
+field string --fieldName address --sizeMax 100
+// [failed] focus --class ~.domain
+entity jpa --class ~.domain.project --testAutomatically 
+field string name
+field string description --sizeMax 500
+// [failed] focus --class ~.domain
+entity jpa --class ~.domain.standup --testAutomatically 
+// [failed] field date --fieldName date --type java.util.Date
+field date --fieldName standup_date --type java.util.Date
+field reference --fieldName conductor --type ~.domain.Employee
+field string --fieldName todays_work --sizeMax 500
+field string --fieldName previous_work --sizeMax 500
+field string --fieldName blocker --sizeMax 500
+// [failed] focus --class User
+focus --class Employee
+focus --class standup
+field set --fieldName employees --type ~.domain.Employee
+// [failed] focus --class ~.Project
+// [failed] field set --fieldName involved_employees --type ~.domain.Employee
+focus --class ~.domain.Project
+field set --fieldName involved_employees --type ~.domain.Employee
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-31 10:51:44
+web mvc setup
+web mvc all --package ~.web
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-31 11:18:40

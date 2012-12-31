@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_tasawr_standupmanager_domain_Standup" modelAttribute="standup" path="/standups" versionField="Version" z="t+91wtoTyCFsKSlq4UucXC5tRg0=">
+        <field:datetime dateTimePattern="${standup_standup_date_date_format}" field="standup_date" id="c_com_tasawr_standupmanager_domain_Standup_standup_date" z="6qX4CPZWfuQ3f3+FxqUD0oeimlU="/>
+        <field:select field="conductor" id="c_com_tasawr_standupmanager_domain_Standup_conductor" itemValue="id" items="${employees}" path="/employees" z="/2rNAdrCu1nJ0wrArKuK4HEdMEs="/>
+        <field:textarea field="todays_work" id="c_com_tasawr_standupmanager_domain_Standup_todays_work" z="1XzXh15i/2sNJ0vBK8PeFny8Xaw="/>
+        <field:textarea field="previous_work" id="c_com_tasawr_standupmanager_domain_Standup_previous_work" z="PVwVtWtWfjD5qRrk7ZWG7JvMNhk="/>
+        <field:textarea field="blocker" id="c_com_tasawr_standupmanager_domain_Standup_blocker" z="Lwbr3hWoO2m0GKlbaxF1MGwn49Q="/>
+        <field:select field="employees" id="c_com_tasawr_standupmanager_domain_Standup_employees" itemValue="id" items="${employees}" multiple="true" path="/employees" z="S6+qAetFQU+DuWrelMQ6sL0kbJ0="/>
+    </form:update>
+</div>

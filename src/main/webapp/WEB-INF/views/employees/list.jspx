@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_tasawr_standupmanager_domain_Employee" items="${employees}" z="u+4jgG0D9cAOfvNAexlrKUekfvI=">
+        <table:table data="${employees}" id="l_com_tasawr_standupmanager_domain_Employee" path="/employees" z="O+qxqrKDzWBUlh1CWG/PNdVDwfY=">
+            <table:column id="c_com_tasawr_standupmanager_domain_Employee_name" property="name" z="gXRxuHAMwN/rAHuhDfa60rRmcwA="/>
+            <table:column id="c_com_tasawr_standupmanager_domain_Employee_email" property="email" z="5OZl/xHaRWePB/LB+OxdBlek1WE="/>
+            <table:column id="c_com_tasawr_standupmanager_domain_Employee_designation" property="designation" z="n1jP0xymxOnZJABLUoE4xvbda0Y="/>
+            <table:column id="c_com_tasawr_standupmanager_domain_Employee_address" property="address" z="UqbQHKcuucc3pDxueDV6ChmV2UM="/>
+        </table:table>
+    </page:list>
+</div>
