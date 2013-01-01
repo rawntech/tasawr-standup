@@ -13,4 +13,10 @@
 <definition extends="default" name="employees/update">
         <put-attribute name="body" value="/WEB-INF/views/employees/update.jspx"/>
     </definition>
+<definition extends="default" name="employees/findEmployeesByNameEquals">
+        <put-attribute name="body" value="/WEB-INF/views/employees/findEmployeesByNameEquals.jspx"/>
+    </definition>
+<definition extends="default" name="employees/findEmployeesByNameIsNull">
+        <put-attribute name="body" value="/WEB-INF/views/employees/findEmployeesByNameIsNull.jspx"/>
+    </definition>
 </tiles-definitions>

@@ -35,3 +35,33 @@ web mvc all --package ~.web
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-01 13:48:41
 security setup
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-01 14:07:35
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-01 17:23:24
+web mvc controller --class ~.web.LoginController
+web mvc finder all
+focus --class ~.domain.Employee
+web mvc finder all
+finder list
+web mvc finder all 
+finder list
+hint
+help finder
+help finder add
+help web mvc finder
+finder list --filter name,equ
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-01 18:46:26
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-01 18:46:43
+focus --class ~.domain.Employee
+finder list --depth 2 --filter equals
+finder list --depth 1 --filter equals
+web mvc finder all
+web mvc finder all
+focus --class ~.web.StandupController
+// [failed] focus --class ~.domain.Employeel
+focus --class ~.domain.Employee
+help finder add
+finder add --finderName asdf
+finder list
+finder add --finderName findEmployeesByNameIsNull
+finder add --finderName findEmployeesByNameEquals
+focus --class ~.web.StandupController
+web mvc finder all
