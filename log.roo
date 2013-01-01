@@ -32,3 +32,5 @@ field set --fieldName involved_employees --type ~.domain.Employee
 web mvc setup
 web mvc all --package ~.web
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-31 11:18:40
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-01 13:48:41
+security setup
