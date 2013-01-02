@@ -1,5 +1,6 @@
 package com.tasawr.standupmanager.domain;
 
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -21,4 +22,7 @@ public class Employee {
 
     @Size(max = 100)
     private String address;
+
+    @ManyToOne
+    private UserRoles user_role;
 }

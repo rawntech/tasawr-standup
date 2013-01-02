@@ -4,6 +4,7 @@
 package com.tasawr.standupmanager.web;
 
 import com.tasawr.standupmanager.domain.Employee;
+import com.tasawr.standupmanager.domain.UserRoles;
 import com.tasawr.standupmanager.web.EmployeeController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -86,6 +87,7 @@ privileged aspect EmployeeController_Roo_Controller {
     
     void EmployeeController.populateEditForm(Model uiModel, Employee employee) {
         uiModel.addAttribute("employee", employee);
+        uiModel.addAttribute("userroleses", UserRoles.findAllUserRoleses());
     }
     
     String EmployeeController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

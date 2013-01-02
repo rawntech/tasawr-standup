@@ -5,6 +5,7 @@ package com.tasawr.standupmanager.domain;
 
 import com.tasawr.standupmanager.domain.Employee;
 import com.tasawr.standupmanager.domain.EmployeeDataOnDemand;
+import com.tasawr.standupmanager.domain.UserRoles;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -28,6 +29,7 @@ privileged aspect EmployeeDataOnDemand_Roo_DataOnDemand {
         setDesignation(obj, index);
         setEmail(obj, index);
         setName(obj, index);
+        setUser_role(obj, index);
         return obj;
     }
     
@@ -61,6 +63,11 @@ privileged aspect EmployeeDataOnDemand_Roo_DataOnDemand {
             name = name.substring(0, 50);
         }
         obj.setName(name);
+    }
+    
+    public void EmployeeDataOnDemand.setUser_role(Employee obj, int index) {
+        UserRoles user_role = null;
+        obj.setUser_role(user_role);
     }
     
     public Employee EmployeeDataOnDemand.getSpecificEmployee(int index) {

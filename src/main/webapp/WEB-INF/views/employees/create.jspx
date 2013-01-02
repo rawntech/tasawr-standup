@@ -7,6 +7,7 @@
         <field:textarea field="email" id="c_com_tasawr_standupmanager_domain_Employee_email" validationMessageCode="field_invalid_email" z="SxypIDCapKeUBgZItZrpxZ8ZLgk="/>
         <field:textarea field="designation" id="c_com_tasawr_standupmanager_domain_Employee_designation" z="3e/cO6S89fmrQmasFi4zqK1DT/A="/>
         <field:textarea field="address" id="c_com_tasawr_standupmanager_domain_Employee_address" z="8pNnYvMZfiJ1x8Wee8Y10W6PmRo="/>
+        <field:select field="user_role" id="c_com_tasawr_standupmanager_domain_Employee_user_role" itemValue="roleId" items="${userroleses}" path="/userroleses" z="OTiH9IQAAAsm+kLDyFpwmUwgUy4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_tasawr_standupmanager_domain_Employee" render="${not empty dependencies}" z="3aGReeR28gGhut/NNueIU60Xfw0="/>
 </div>

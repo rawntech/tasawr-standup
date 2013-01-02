@@ -8,6 +8,7 @@
             <table:column id="c_com_tasawr_standupmanager_domain_Employee_email" property="email" z="5OZl/xHaRWePB/LB+OxdBlek1WE="/>
             <table:column id="c_com_tasawr_standupmanager_domain_Employee_designation" property="designation" z="n1jP0xymxOnZJABLUoE4xvbda0Y="/>
             <table:column id="c_com_tasawr_standupmanager_domain_Employee_address" property="address" z="UqbQHKcuucc3pDxueDV6ChmV2UM="/>
+            <table:column id="c_com_tasawr_standupmanager_domain_Employee_user_role" property="user_role" z="pM15lzh5e+0rTl2Xlsl8hf0kvQA="/>
         </table:table>
     </page:list>
 </div>

@@ -4,6 +4,7 @@
 package com.tasawr.standupmanager.domain;
 
 import com.tasawr.standupmanager.domain.Employee;
+import com.tasawr.standupmanager.domain.UserRoles;
 
 privileged aspect Employee_Roo_JavaBean {
     
@@ -37,6 +38,14 @@ privileged aspect Employee_Roo_JavaBean {
     
     public void Employee.setAddress(String address) {
         this.address = address;
+    }
+    
+    public UserRoles Employee.getUser_role() {
+        return this.user_role;
+    }
+    
+    public void Employee.setUser_role(UserRoles user_role) {
+        this.user_role = user_role;
     }
     
 }

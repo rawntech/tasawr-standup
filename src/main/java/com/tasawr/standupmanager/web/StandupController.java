@@ -4,7 +4,6 @@ import com.tasawr.standupmanager.domain.Employee;
 import com.tasawr.standupmanager.domain.Standup;
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
@@ -24,26 +23,25 @@ import org.springframework.web.util.WebUtils;
 @Controller
 @RooWebScaffold(path = "standups", formBackingObject = Standup.class)
 public class StandupController {
-	
-	@RequestMapping(method = RequestMethod.POST, produces = "text/html")
+
+    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String create(@Valid Standup standup, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest, Principal principal) {
         if (bindingResult.hasErrors()) {
             populateEditForm(uiModel, standup);
             return "standups/create";
         }
-        
         uiModel.asMap().clear();
         standup.persist();
         return "redirect:/standups/" + encodeUrlPathSegment(standup.getId().toString(), httpServletRequest);
     }
 
-	@RequestMapping(params = "form", produces = "text/html")
+    @RequestMapping(params = "form", produces = "text/html")
     public String createForm(Model uiModel) {
         populateEditForm(uiModel, new Standup());
         return "standups/create";
     }
 
-	@RequestMapping(value = "/{id}", produces = "text/html")
+    @RequestMapping(value = "/{id}", produces = "text/html")
     public String show(@PathVariable("id") Long id, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("standup", Standup.findStandup(id));
@@ -51,7 +49,7 @@ public class StandupController {
         return "standups/show";
     }
 
-	@RequestMapping(produces = "text/html")
+    @RequestMapping(produces = "text/html")
     public String list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         if (page != null || size != null) {
             int sizeNo = size == null ? 10 : size.intValue();
@@ -66,7 +64,7 @@ public class StandupController {
         return "standups/list";
     }
 
-	@RequestMapping(method = RequestMethod.PUT, produces = "text/html")
+    @RequestMapping(method = RequestMethod.PUT, produces = "text/html")
     public String update(@Valid Standup standup, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             populateEditForm(uiModel, standup);
@@ -77,13 +75,13 @@ public class StandupController {
         return "redirect:/standups/" + encodeUrlPathSegment(standup.getId().toString(), httpServletRequest);
     }
 
-	@RequestMapping(value = "/{id}", params = "form", produces = "text/html")
+    @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
     public String updateForm(@PathVariable("id") Long id, Model uiModel) {
         populateEditForm(uiModel, Standup.findStandup(id));
         return "standups/update";
     }
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
     public String delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Standup standup = Standup.findStandup(id);
         standup.remove();
@@ -93,24 +91,25 @@ public class StandupController {
         return "redirect:/standups";
     }
 
-	void addDateTimeFormatPatterns(Model uiModel) {
+    void addDateTimeFormatPatterns(Model uiModel) {
         uiModel.addAttribute("standup_standup_date_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
 
-	void populateEditForm(Model uiModel, Standup standup) {
+    void populateEditForm(Model uiModel, Standup standup) {
         uiModel.addAttribute("standup", standup);
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("employees", Employee.findAllEmployees());
     }
 
-	String encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
+    String encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
         String enc = httpServletRequest.getCharacterEncoding();
         if (enc == null) {
             enc = WebUtils.DEFAULT_CHARACTER_ENCODING;
         }
         try {
             pathSegment = UriUtils.encodePathSegment(pathSegment, enc);
-        } catch (UnsupportedEncodingException uee) {}
+        } catch (UnsupportedEncodingException uee) {
+        }
         return pathSegment;
     }
 }

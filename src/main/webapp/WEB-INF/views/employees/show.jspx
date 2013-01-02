@@ -7,5 +7,6 @@
         <field:display field="email" id="s_com_tasawr_standupmanager_domain_Employee_email" object="${employee}" z="2waW+C3lyeW51E+X9eIt63h6rB4="/>
         <field:display field="designation" id="s_com_tasawr_standupmanager_domain_Employee_designation" object="${employee}" z="UFGbgcDExwexremp8J8fJqgk++w="/>
         <field:display field="address" id="s_com_tasawr_standupmanager_domain_Employee_address" object="${employee}" z="hg8Wwuc9ipMyE5tlNuimmo/U0j0="/>
+        <field:display field="user_role" id="s_com_tasawr_standupmanager_domain_Employee_user_role" object="${employee}" z="U1GLMVf7SYBdyuWjDNC8W3A/5lQ="/>
     </page:show>
 </div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="userroleses/list">
+        <put-attribute name="body" value="/WEB-INF/views/userroleses/list.jspx"/>
+    </definition>
+<definition extends="default" name="userroleses/show">
+        <put-attribute name="body" value="/WEB-INF/views/userroleses/show.jspx"/>
+    </definition>
+<definition extends="default" name="userroleses/create">
+        <put-attribute name="body" value="/WEB-INF/views/userroleses/create.jspx"/>
+    </definition>
+<definition extends="default" name="userroleses/update">
+        <put-attribute name="body" value="/WEB-INF/views/userroleses/update.jspx"/>
+    </definition>
+</tiles-definitions>

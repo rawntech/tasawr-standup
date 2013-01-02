@@ -20,5 +20,9 @@
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__loginindex_id" messageCode="global_generic" url="/login/index" z="+bAgKvV6j5ehIOcfril0sqwLmhU="/>
         </menu:category>
+        <menu:category id="c_userroles" z="Fi1fhBIaW9oU5HbbB/lGtvv6sQs=">
+            <menu:item id="i_userroles_new" messageCode="global_menu_new" url="/userroleses?form" z="XYfM9XO2SP09YnlBVzW5BIh/eS4="/>
+            <menu:item id="i_userroles_list" messageCode="global_menu_list" url="/userroleses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Lpq7KZeBZJ1TIzbVlsZvLdCia70="/>
+        </menu:category>
     </menu:menu>
 </div>
