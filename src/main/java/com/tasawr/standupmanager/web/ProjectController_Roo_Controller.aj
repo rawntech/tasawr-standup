@@ -27,6 +27,7 @@ privileged aspect ProjectController_Roo_Controller {
             return "projects/create";
         }
         uiModel.asMap().clear();
+        
         project.persist();
         return "redirect:/projects/" + encodeUrlPathSegment(project.getId().toString(), httpServletRequest);
     }

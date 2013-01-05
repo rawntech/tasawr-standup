@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_tasawr_standupmanager_domain_Standup" modelAttribute="standup" path="/standups" render="${empty dependencies}" z="sfDCNblflOUVibB0ejI8ocQlRNE=">
         <field:datetime dateTimePattern="${standup_standup_date_date_format}" field="standup_date" id="c_com_tasawr_standupmanager_domain_Standup_standup_date" z="6qX4CPZWfuQ3f3+FxqUD0oeimlU="/>
-        <field:select field="conductor" id="c_com_tasawr_standupmanager_domain_Standup_conductor" itemValue="id" items="${employees}" path="/employees" z="/2rNAdrCu1nJ0wrArKuK4HEdMEs="/>
+        <field:select field="conductor" render="false" id="c_com_tasawr_standupmanager_domain_Standup_conductor" itemValue="id" items="${employees}" path="/employees" z="/2rNAdrCu1nJ0wrArKuK4HEdMEs="/>
         <field:textarea field="todays_work" id="c_com_tasawr_standupmanager_domain_Standup_todays_work" z="1XzXh15i/2sNJ0vBK8PeFny8Xaw="/>
         <field:textarea field="previous_work" id="c_com_tasawr_standupmanager_domain_Standup_previous_work" z="PVwVtWtWfjD5qRrk7ZWG7JvMNhk="/>
         <field:textarea field="blocker" id="c_com_tasawr_standupmanager_domain_Standup_blocker" z="Lwbr3hWoO2m0GKlbaxF1MGwn49Q="/>

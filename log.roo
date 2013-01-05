@@ -76,3 +76,7 @@ field reference --fieldName user_role --type ~.domain.UserRoles
 focus --class ~.domain.Employee
 web mvc all --package ~.web
 jpa setup --database MYSQL --provider HIBERNATE --databaseName tswr_standupmanager --userName root --password
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-05 14:12:35
+perform package
+perform package
+perform package

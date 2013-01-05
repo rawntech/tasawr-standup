@@ -37,4 +37,14 @@ public class Standup {
 
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Employee> employees = new HashSet<Employee>();
+
+	public Employee getConductor() {
+		return conductor;
+	}
+
+	public void setConductor(Employee conductor) {
+		this.conductor = conductor;
+	}
+
+    
 }

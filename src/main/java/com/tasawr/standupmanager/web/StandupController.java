@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -22,15 +24,26 @@ import org.springframework.web.util.WebUtils;
 @RequestMapping("/standups")
 @Controller
 @RooWebScaffold(path = "standups", formBackingObject = Standup.class)
+@RooWebFinder
 public class StandupController {
 
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String create(@Valid Standup standup, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest, Principal principal) {
+    public String create(@Valid Standup standup, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest, Principal principal, Employee employee) {
         if (bindingResult.hasErrors()) {
+        	
             populateEditForm(uiModel, standup);
             return "standups/create";
         }
+        
         uiModel.asMap().clear();
+        
+        
+        String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        
+        Employee empByName = (Employee) Employee.findEmployeesByNameEquals(name).getSingleResult();
+        
+        System.out.println(empByName.getName());
+        standup.setConductor(empByName);
         standup.persist();
         return "redirect:/standups/" + encodeUrlPathSegment(standup.getId().toString(), httpServletRequest);
     }

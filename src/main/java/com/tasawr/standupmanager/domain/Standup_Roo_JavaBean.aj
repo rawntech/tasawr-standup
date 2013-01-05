@@ -18,14 +18,6 @@ privileged aspect Standup_Roo_JavaBean {
         this.standup_date = standup_date;
     }
     
-    public Employee Standup.getConductor() {
-        return this.conductor;
-    }
-    
-    public void Standup.setConductor(Employee conductor) {
-        this.conductor = conductor;
-    }
-    
     public String Standup.getTodays_work() {
         return this.todays_work;
     }

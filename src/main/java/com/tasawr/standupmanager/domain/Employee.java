@@ -12,17 +12,17 @@ import org.springframework.roo.addon.tostring.RooToString;
 public class Employee {
 
     @Size(max = 50)
-    private String name;
+    protected String name;
 
     @Size(max = 50)
-    private String email;
+    protected String email;
 
     @Size(max = 50)
-    private String designation;
+    protected String designation;
 
     @Size(max = 100)
-    private String address;
+    protected String address;
 
     @ManyToOne
-    private UserRoles user_role;
+    protected UserRoles user_role;
 }
