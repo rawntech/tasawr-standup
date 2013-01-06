@@ -6,7 +6,6 @@ package com.tasawr.standupmanager.domain;
 import com.tasawr.standupmanager.domain.Employee;
 import com.tasawr.standupmanager.domain.Standup;
 import java.util.Date;
-import java.util.Set;
 
 privileged aspect Standup_Roo_JavaBean {
     
@@ -42,12 +41,12 @@ privileged aspect Standup_Roo_JavaBean {
         this.blocker = blocker;
     }
     
-    public Set<Employee> Standup.getEmployees() {
-        return this.employees;
+    public Employee Standup.getEmployeeName() {
+        return this.EmployeeName;
     }
     
-    public void Standup.setEmployees(Set<Employee> employees) {
-        this.employees = employees;
+    public void Standup.setEmployeeName(Employee EmployeeName) {
+        this.EmployeeName = EmployeeName;
     }
     
 }

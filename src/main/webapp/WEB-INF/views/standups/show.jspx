@@ -8,6 +8,6 @@
         <field:display field="todays_work" id="s_com_tasawr_standupmanager_domain_Standup_todays_work" object="${standup}" z="pvXIQf8rquNRDjvGfDvF0/cZEf4="/>
         <field:display field="previous_work" id="s_com_tasawr_standupmanager_domain_Standup_previous_work" object="${standup}" z="UdEVhHugTlhSWEaEBhUoanErHug="/>
         <field:display field="blocker" id="s_com_tasawr_standupmanager_domain_Standup_blocker" object="${standup}" z="AMg0KajvSanCwc5nQq12VW7mAgM="/>
-        <field:display field="employees" id="s_com_tasawr_standupmanager_domain_Standup_employees" object="${standup}" z="WhsgT29JsMqT3h1QM3bc6N2lcWg="/>
+        <field:display field="employeeName" id="s_com_tasawr_standupmanager_domain_Standup_EmployeeName" object="${standup}" z="mC2KWaADQf/XxZFJo9BP/7lj7RU="/>
     </page:show>
 </div>

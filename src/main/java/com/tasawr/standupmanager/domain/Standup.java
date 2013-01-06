@@ -35,16 +35,14 @@ public class Standup {
     @Size(max = 500)
     private String blocker;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    private Set<Employee> employees = new HashSet<Employee>();
+    @ManyToOne
+    private Employee EmployeeName;
 
-	public Employee getConductor() {
-		return conductor;
-	}
+    public Employee getConductor() {
+        return conductor;
+    }
 
-	public void setConductor(Employee conductor) {
-		this.conductor = conductor;
-	}
-
-    
+    public void setConductor(Employee conductor) {
+        this.conductor = conductor;
+    }
 }

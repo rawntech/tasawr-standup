@@ -6,8 +6,8 @@
         <menu:category id="c_employee" z="sxLyQbJ/qSw9Reoi1NHvJhkZ/rU=">
             <menu:item id="i_employee_new" messageCode="global_menu_new" url="/employees?form" z="+S/pgOAdANt9JPGnS20kM8qTu00="/>
             <menu:item id="i_employee_list" messageCode="global_menu_list" url="/employees?page=1&amp;size=${empty param.size ? 10 : param.size}" z="IfTXfF5mBLDCW+DUkfuN3Wgvias="/>
-            <menu:item id="fi_employee_nameequals" messageCode="global_menu_find" url="/employees?find=ByNameEquals&amp;form" z="6dk4GfpFmmcTTaFBaJsEHaywgVY="/>
-            <menu:item id="fi_employee_nameisnull" messageCode="global_menu_find" url="/employees?find=ByNameIsNull&amp;form" z="281+Gbr42L677PPl80oYivgidZE="/>
+            <menu:item id="fi_employee_nameequals" messageCode="global_menu_find" render="false" url="/employees?find=ByNameEquals&amp;form" z="user-managed"/>
+            <menu:item id="fi_employee_nameisnull" messageCode="global_menu_find" render="false" url="/employees?find=ByNameIsNull&amp;form" z="user-managed"/>
         </menu:category>
         <menu:category id="c_standup" z="hnIJQdiZoH434WDx6JhKFxFk/Y0=">
             <menu:item id="i_standup_new" messageCode="global_menu_new" url="/standups?form" z="wsIHHlGsHyiVl9Hpu1BLgnjM82o="/>
@@ -17,10 +17,10 @@
             <menu:item id="i_project_new" messageCode="global_menu_new" url="/projects?form" z="1BazRC1rLnod0a+MpP1flWTvehA="/>
             <menu:item id="i_project_list" messageCode="global_menu_list" url="/projects?page=1&amp;size=${empty param.size ? 10 : param.size}" z="GHL05c3Rvr+eKDgRCk3Ttak0W+g="/>
         </menu:category>
-        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+        <menu:category id="c_controller" render="false" z="user-managed">
             <menu:item id="i_controller__loginindex_id" messageCode="global_generic" url="/login/index" z="+bAgKvV6j5ehIOcfril0sqwLmhU="/>
         </menu:category>
-        <menu:category id="c_userroles" z="Fi1fhBIaW9oU5HbbB/lGtvv6sQs=">
+        <menu:category id="c_userroles" render="false" z="user-managed">
             <menu:item id="i_userroles_new" messageCode="global_menu_new" url="/userroleses?form" z="XYfM9XO2SP09YnlBVzW5BIh/eS4="/>
             <menu:item id="i_userroles_list" messageCode="global_menu_list" url="/userroleses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Lpq7KZeBZJ1TIzbVlsZvLdCia70="/>
         </menu:category>

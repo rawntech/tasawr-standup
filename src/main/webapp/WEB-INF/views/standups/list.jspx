@@ -9,7 +9,7 @@
             <table:column id="c_com_tasawr_standupmanager_domain_Standup_todays_work" property="todays_work" z="Nj/Yz/pJLtKodAi+zmvkncEgrEM="/>
             <table:column id="c_com_tasawr_standupmanager_domain_Standup_previous_work" property="previous_work" z="qC7Ug9Yvr7oTTtKi1u2nFj3gMG4="/>
             <table:column id="c_com_tasawr_standupmanager_domain_Standup_blocker" property="blocker" z="eweHSwrHz3KHa6ZgdS3qad33u2M="/>
-            <table:column id="c_com_tasawr_standupmanager_domain_Standup_employees" property="employees" z="eUW1OC9mIQt61W+efDGX6S31FBc="/>
+            <table:column id="c_com_tasawr_standupmanager_domain_Standup_EmployeeName" property="employeeName" z="dmf5CY70edHT+LM6mzUZjBrT72w="/>
         </table:table>
     </page:list>
 </div>

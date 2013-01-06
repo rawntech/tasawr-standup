@@ -8,6 +8,6 @@
         <field:textarea field="todays_work" id="c_com_tasawr_standupmanager_domain_Standup_todays_work" z="1XzXh15i/2sNJ0vBK8PeFny8Xaw="/>
         <field:textarea field="previous_work" id="c_com_tasawr_standupmanager_domain_Standup_previous_work" z="PVwVtWtWfjD5qRrk7ZWG7JvMNhk="/>
         <field:textarea field="blocker" id="c_com_tasawr_standupmanager_domain_Standup_blocker" z="Lwbr3hWoO2m0GKlbaxF1MGwn49Q="/>
-        <field:select field="employees" id="c_com_tasawr_standupmanager_domain_Standup_employees" itemValue="id" items="${employees}" multiple="true" path="/employees" z="S6+qAetFQU+DuWrelMQ6sL0kbJ0="/>
+        <field:select field="EmployeeName" id="c_com_tasawr_standupmanager_domain_Standup_EmployeeName" itemValue="id" items="${employees}" path="/employees" z="hj0IbSQA6hqxNDOk3zJBdqhydQM="/>
     </form:update>
 </div>

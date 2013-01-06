@@ -6,6 +6,8 @@ import java.io.UnsupportedEncodingException;
 import java.security.Principal;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
+import org.apache.log4j.Logger;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
@@ -35,16 +37,20 @@ public class StandupController {
             return "standups/create";
         }
         
+        
         uiModel.asMap().clear();
         
         
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
         
+        
         Employee empByName = (Employee) Employee.findEmployeesByNameEquals(name).getSingleResult();
         
-        System.out.println(empByName.getName());
-        standup.setConductor(empByName);
-        standup.persist();
+           standup.setConductor(empByName);
+  
+            standup.persist();	
+	
+        
         return "redirect:/standups/" + encodeUrlPathSegment(standup.getId().toString(), httpServletRequest);
     }
 
