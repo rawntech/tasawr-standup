@@ -1,6 +1,8 @@
 package com.tasawr.standupmanager.domain;
 
+import javax.persistence.Column;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Size;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -25,4 +27,14 @@ public class Employee {
 
     @ManyToOne
     protected UserRoles user_role;
+
+    @Column(unique = true)
+    @Size(min = 4, max = 10)
+    private String username;
+
+    @Size(min = 4, max = 10)
+    private String password;
+
+    @AssertTrue
+    private Boolean enabled;
 }

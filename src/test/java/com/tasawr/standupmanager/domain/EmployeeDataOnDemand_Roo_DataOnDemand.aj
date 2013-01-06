@@ -28,8 +28,11 @@ privileged aspect EmployeeDataOnDemand_Roo_DataOnDemand {
         setAddress(obj, index);
         setDesignation(obj, index);
         setEmail(obj, index);
+        setEnabled(obj, index);
         setName(obj, index);
+        setPassword(obj, index);
         setUser_role(obj, index);
+        setUsername(obj, index);
         return obj;
     }
     
@@ -57,6 +60,11 @@ privileged aspect EmployeeDataOnDemand_Roo_DataOnDemand {
         obj.setEmail(email);
     }
     
+    public void EmployeeDataOnDemand.setEnabled(Employee obj, int index) {
+        Boolean enabled = Boolean.TRUE;
+        obj.setEnabled(enabled);
+    }
+    
     public void EmployeeDataOnDemand.setName(Employee obj, int index) {
         String name = "name_" + index;
         if (name.length() > 50) {
@@ -65,9 +73,25 @@ privileged aspect EmployeeDataOnDemand_Roo_DataOnDemand {
         obj.setName(name);
     }
     
+    public void EmployeeDataOnDemand.setPassword(Employee obj, int index) {
+        String password = "password_" + index;
+        if (password.length() > 10) {
+            password = password.substring(0, 10);
+        }
+        obj.setPassword(password);
+    }
+    
     public void EmployeeDataOnDemand.setUser_role(Employee obj, int index) {
         UserRoles user_role = null;
         obj.setUser_role(user_role);
+    }
+    
+    public void EmployeeDataOnDemand.setUsername(Employee obj, int index) {
+        String username = "username_" + index;
+        if (username.length() > 10) {
+            username = new Random().nextInt(10) + username.substring(1, 10);
+        }
+        obj.setUsername(username);
     }
     
     public Employee EmployeeDataOnDemand.getSpecificEmployee(int index) {

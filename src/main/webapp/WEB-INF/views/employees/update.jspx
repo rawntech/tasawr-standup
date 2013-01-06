@@ -8,5 +8,8 @@
         <field:textarea field="designation" id="c_com_tasawr_standupmanager_domain_Employee_designation" z="3e/cO6S89fmrQmasFi4zqK1DT/A="/>
         <field:textarea field="address" id="c_com_tasawr_standupmanager_domain_Employee_address" z="8pNnYvMZfiJ1x8Wee8Y10W6PmRo="/>
         <field:select field="user_role" id="c_com_tasawr_standupmanager_domain_Employee_user_role" itemValue="roleId" items="${userroleses}" path="/userroleses" z="OTiH9IQAAAsm+kLDyFpwmUwgUy4="/>
+        <field:input field="username" id="c_com_tasawr_standupmanager_domain_Employee_username" max="10" min="4" required="true" z="xZ7l7N/BxKIIzT+HWOSqIQFb1lg="/>
+        <field:input field="password" id="c_com_tasawr_standupmanager_domain_Employee_password" max="10" min="4" required="true" z="J5MbuaVKFnJT8SXu84MdqsuVJZM="/>
+        <field:checkbox field="enabled" id="c_com_tasawr_standupmanager_domain_Employee_enabled" z="GaxxWUBLzaWsPAcaH5gwPROi/ZI="/>
     </form:update>
 </div>

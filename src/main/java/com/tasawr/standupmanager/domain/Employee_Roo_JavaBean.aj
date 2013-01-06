@@ -48,4 +48,28 @@ privileged aspect Employee_Roo_JavaBean {
         this.user_role = user_role;
     }
     
+    public String Employee.getUsername() {
+        return this.username;
+    }
+    
+    public void Employee.setUsername(String username) {
+        this.username = username;
+    }
+    
+    public String Employee.getPassword() {
+        return this.password;
+    }
+    
+    public void Employee.setPassword(String password) {
+        this.password = password;
+    }
+    
+    public Boolean Employee.getEnabled() {
+        return this.enabled;
+    }
+    
+    public void Employee.setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+    
 }

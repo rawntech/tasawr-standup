@@ -8,5 +8,8 @@
         <field:display field="designation" id="s_com_tasawr_standupmanager_domain_Employee_designation" object="${employee}" z="UFGbgcDExwexremp8J8fJqgk++w="/>
         <field:display field="address" id="s_com_tasawr_standupmanager_domain_Employee_address" object="${employee}" z="hg8Wwuc9ipMyE5tlNuimmo/U0j0="/>
         <field:display field="user_role" id="s_com_tasawr_standupmanager_domain_Employee_user_role" object="${employee}" z="U1GLMVf7SYBdyuWjDNC8W3A/5lQ="/>
+        <field:display field="username" id="s_com_tasawr_standupmanager_domain_Employee_username" object="${employee}" z="yqkAFJMVfsppkDDY+5d8uJ+esQ8="/>
+        <field:display field="password" id="s_com_tasawr_standupmanager_domain_Employee_password" object="${employee}" z="m1SisrWABlJQIy4xBGAWp1sM9hg="/>
+        <field:display field="enabled" id="s_com_tasawr_standupmanager_domain_Employee_enabled" object="${employee}" z="b+VuljcQi4Dx+rMOZcbqNNxsuHs="/>
     </page:show>
 </div>
