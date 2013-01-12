@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_tasawr_standupmanager_domain_Users" object="${users}" path="/userses" z="jBQdS23Y4LOgT91M0Xxk2Df9qFk=">
+        <field:display field="username" id="s_com_tasawr_standupmanager_domain_Users_username" object="${users}" z="/R1CDx5mTyRd1FBMhkE27Zu2Woc="/>
+        <field:display field="password" id="s_com_tasawr_standupmanager_domain_Users_password" object="${users}" z="qN0SDKRR4OlQg3kZ974X+7lSAlM="/>
+        <field:display field="enabled" id="s_com_tasawr_standupmanager_domain_Users_enabled" object="${users}" z="IYfSrHZiZmBeV+2c8XMDoEo3AkQ="/>
+        <field:display field="roles" id="s_com_tasawr_standupmanager_domain_Users_roles" object="${users}" z="GpLSM2C9rNjaBuCD9MMwKvFBii4="/>
+    </page:show>
+</div>

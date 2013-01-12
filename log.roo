@@ -32,3 +32,30 @@ field set --fieldName involved_employees --type ~.domain.Employee
 web mvc setup
 web mvc all --package ~.web
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-31 11:18:40
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-12 11:31:52
+perform eclipse
+hint
+hint
+jpa setup --provider HIBERNATE --database MYSQL --userName ferdous --password f --databaseName tasawr_standup
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-12 11:37:59
+jpa setup --provider HIBERNATE --database MYSQL --userName ferdous --password f --databaseName tasawr_standup
+database properties list
+// [failed] database introspect --schema tasawr_standup
+jpa setup --provider HIBERNATE --database MYSQL --userName ferdous --password f --databaseName tasawr_standup
+entity jpa --class ~.domain.Employee
+security setup
+// [failed] entity jpa --class ~.domain.Role
+entity jpa --class ~.domain.Roles
+field string --fieldName username --notNull 1 --sizeMin 3 --sizeMax 100
+field string --fieldName roleName --notNull 1 --sizeMin 3 --sizeMax 100
+entity jpa --class ~.domain.Users --testAutomatically 
+entity jpa --class ~.domain.Roles --testAutomatically 
+field string --fieldName roleName --notNull 1 --sizeMin 3 --sizeMax 100
+entity jpa --class ~.domain.Users --testAutomatically 
+field string --fieldName username --notNull 1 --sizeMin 3 --sizeMax 100
+field string --fieldName password --notNull 1 --sizeMax 100
+field boolean --fieldName enabled
+field set --fieldName roles --type ~.domain.Roles --cardinality MANY_TO_MANY
+controller scaffold --entity ~.domain.Users --class ~.web.UsersController
+controller scaffold --entity ~.domain.Roles --class ~.web.RolesController
+perform eclipse

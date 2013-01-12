@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_tasawr_standupmanager_domain_Users" modelAttribute="users" path="/userses" versionField="Version" z="eMuLfQNzPyYqYOsK5M0l7gX6MeE=">
+        <field:textarea field="username" id="c_com_tasawr_standupmanager_domain_Users_username" required="true" z="Gc+RiW8Y0GSToh0msGFQuHvOVxM="/>
+        <field:textarea field="password" id="c_com_tasawr_standupmanager_domain_Users_password" required="true" z="dF5KhwmXXUdJzbU8DyQpAYPxJL4="/>
+        <field:checkbox field="enabled" id="c_com_tasawr_standupmanager_domain_Users_enabled" z="7uIu6PCcW0iFkXsu/rx0Dh/reKk="/>
+        <field:select field="roles" id="c_com_tasawr_standupmanager_domain_Users_roles" itemValue="id" items="${roleses}" multiple="true" path="/roleses" z="cRKSnAO8TVTmqCV/LUixkIsu0Lk="/>
+    </form:update>
+</div>

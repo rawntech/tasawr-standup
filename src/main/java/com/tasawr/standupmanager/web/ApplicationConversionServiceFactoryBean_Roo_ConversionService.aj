@@ -5,7 +5,9 @@ package com.tasawr.standupmanager.web;
 
 import com.tasawr.standupmanager.domain.Employee;
 import com.tasawr.standupmanager.domain.Project;
+import com.tasawr.standupmanager.domain.Roles;
 import com.tasawr.standupmanager.domain.Standup;
+import com.tasawr.standupmanager.domain.Users;
 import com.tasawr.standupmanager.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -63,6 +65,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Roles, String> ApplicationConversionServiceFactoryBean.getRolesToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.tasawr.standupmanager.domain.Roles, java.lang.String>() {
+            public String convert(Roles roles) {
+                return new StringBuilder().append(roles.getRoleName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Roles> ApplicationConversionServiceFactoryBean.getIdToRolesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.tasawr.standupmanager.domain.Roles>() {
+            public com.tasawr.standupmanager.domain.Roles convert(java.lang.Long id) {
+                return Roles.findRoles(id);
+            }
+        };
+    }
+    
+    public Converter<String, Roles> ApplicationConversionServiceFactoryBean.getStringToRolesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.tasawr.standupmanager.domain.Roles>() {
+            public com.tasawr.standupmanager.domain.Roles convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Roles.class);
+            }
+        };
+    }
+    
     public Converter<Standup, String> ApplicationConversionServiceFactoryBean.getStandupToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.tasawr.standupmanager.domain.Standup, java.lang.String>() {
             public String convert(Standup standup) {
@@ -87,6 +113,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Users, String> ApplicationConversionServiceFactoryBean.getUsersToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.tasawr.standupmanager.domain.Users, java.lang.String>() {
+            public String convert(Users users) {
+                return new StringBuilder().append(users.getUsername()).append(' ').append(users.getPassword()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Users> ApplicationConversionServiceFactoryBean.getIdToUsersConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.tasawr.standupmanager.domain.Users>() {
+            public com.tasawr.standupmanager.domain.Users convert(java.lang.Long id) {
+                return Users.findUsers(id);
+            }
+        };
+    }
+    
+    public Converter<String, Users> ApplicationConversionServiceFactoryBean.getStringToUsersConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.tasawr.standupmanager.domain.Users>() {
+            public com.tasawr.standupmanager.domain.Users convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Users.class);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getEmployeeToStringConverter());
         registry.addConverter(getIdToEmployeeConverter());
@@ -94,9 +144,15 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getProjectToStringConverter());
         registry.addConverter(getIdToProjectConverter());
         registry.addConverter(getStringToProjectConverter());
+        registry.addConverter(getRolesToStringConverter());
+        registry.addConverter(getIdToRolesConverter());
+        registry.addConverter(getStringToRolesConverter());
         registry.addConverter(getStandupToStringConverter());
         registry.addConverter(getIdToStandupConverter());
         registry.addConverter(getStringToStandupConverter());
+        registry.addConverter(getUsersToStringConverter());
+        registry.addConverter(getIdToUsersConverter());
+        registry.addConverter(getStringToUsersConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {
