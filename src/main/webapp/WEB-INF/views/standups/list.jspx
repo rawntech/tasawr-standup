@@ -5,11 +5,11 @@
     <page:list id="pl_com_tasawr_standupmanager_domain_Standup" items="${standups}" z="mhjdJ4gdPCwh3n1dfmKBR2wx2Ak=">
         <table:table data="${standups}" id="l_com_tasawr_standupmanager_domain_Standup" path="/standups" z="K3p7/q2PizOXelZTPgReAzvZKt4=">
             <table:column date="true" dateTimePattern="${standup_standup_date_date_format}" id="c_com_tasawr_standupmanager_domain_Standup_standup_date" property="standup_date" z="bFI/Ho7BtKAQvQ3cMxh0+PVrBbU="/>
-            <table:column id="c_com_tasawr_standupmanager_domain_Standup_conductor" property="conductor" z="1KKkmqCXXbuTakXtOk3/UEjr0IE="/>
             <table:column id="c_com_tasawr_standupmanager_domain_Standup_todays_work" property="todays_work" z="Nj/Yz/pJLtKodAi+zmvkncEgrEM="/>
             <table:column id="c_com_tasawr_standupmanager_domain_Standup_previous_work" property="previous_work" z="qC7Ug9Yvr7oTTtKi1u2nFj3gMG4="/>
             <table:column id="c_com_tasawr_standupmanager_domain_Standup_blocker" property="blocker" z="eweHSwrHz3KHa6ZgdS3qad33u2M="/>
-            <table:column id="c_com_tasawr_standupmanager_domain_Standup_employees" property="employees" z="eUW1OC9mIQt61W+efDGX6S31FBc="/>
+            <table:column id="c_com_tasawr_standupmanager_domain_Standup_standupUser" property="standupUser" z="FtyTQduGtr5tV8i8Joyjbpn0ZxY="/>
+            <table:column id="c_com_tasawr_standupmanager_domain_Standup_standupConductor" property="standupConductor" z="uoXGeZSVgJKoEMBUyDnfYBtgHSk="/>
         </table:table>
     </page:list>
 </div>

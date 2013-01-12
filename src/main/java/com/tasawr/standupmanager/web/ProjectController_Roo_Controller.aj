@@ -3,7 +3,6 @@
 
 package com.tasawr.standupmanager.web;
 
-import com.tasawr.standupmanager.domain.Employee;
 import com.tasawr.standupmanager.domain.Project;
 import com.tasawr.standupmanager.web.ProjectController;
 import java.io.UnsupportedEncodingException;
@@ -87,7 +86,6 @@ privileged aspect ProjectController_Roo_Controller {
     
     void ProjectController.populateEditForm(Model uiModel, Project project) {
         uiModel.addAttribute("project", project);
-        uiModel.addAttribute("employees", Employee.findAllEmployees());
     }
     
     String ProjectController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

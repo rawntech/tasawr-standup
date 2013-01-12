@@ -5,6 +5,5 @@
     <page:show id="ps_com_tasawr_standupmanager_domain_Project" object="${project}" path="/projects" z="gSs7S9G58rdYnOE0ud2rtYoomC4=">
         <field:display field="name" id="s_com_tasawr_standupmanager_domain_Project_name" object="${project}" z="GzT9vJXQrQSe0128F6muPyRZvlA="/>
         <field:display field="description" id="s_com_tasawr_standupmanager_domain_Project_description" object="${project}" z="0pKx2F0sJiTnugZinPl1/kUlJGE="/>
-        <field:display field="involved_employees" id="s_com_tasawr_standupmanager_domain_Project_involved_employees" object="${project}" z="EptdbOi6cUBJJDJGeT7h3Ziq0Bg="/>
     </page:show>
 </div>

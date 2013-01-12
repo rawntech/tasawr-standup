@@ -3,6 +3,7 @@
 
 package com.tasawr.standupmanager.domain;
 
+import com.tasawr.standupmanager.domain.Project;
 import com.tasawr.standupmanager.domain.Roles;
 import com.tasawr.standupmanager.domain.Users;
 import java.util.Set;
@@ -39,6 +40,14 @@ privileged aspect Users_Roo_JavaBean {
     
     public void Users.setRoles(Set<Roles> roles) {
         this.roles = roles;
+    }
+    
+    public Set<Project> Users.getProjects() {
+        return this.projects;
+    }
+    
+    public void Users.setProjects(Set<Project> projects) {
+        this.projects = projects;
     }
     
 }

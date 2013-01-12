@@ -4,10 +4,11 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_tasawr_standupmanager_domain_Standup" object="${standup}" path="/standups" z="Qa3rkjqoPagq7uxCQ3eagR82Bwg=">
         <field:display date="true" dateTimePattern="${standup_standup_date_date_format}" field="standup_date" id="s_com_tasawr_standupmanager_domain_Standup_standup_date" object="${standup}" z="k6AKazn7a8QZ9gNmPkcvfewKP28="/>
-        <field:display field="conductor" id="s_com_tasawr_standupmanager_domain_Standup_conductor" object="${standup}" z="2FP6ZMkZZrexgEBcVQ8Acg0Eoq8="/>
         <field:display field="todays_work" id="s_com_tasawr_standupmanager_domain_Standup_todays_work" object="${standup}" z="pvXIQf8rquNRDjvGfDvF0/cZEf4="/>
         <field:display field="previous_work" id="s_com_tasawr_standupmanager_domain_Standup_previous_work" object="${standup}" z="UdEVhHugTlhSWEaEBhUoanErHug="/>
         <field:display field="blocker" id="s_com_tasawr_standupmanager_domain_Standup_blocker" object="${standup}" z="AMg0KajvSanCwc5nQq12VW7mAgM="/>
-        <field:display field="employees" id="s_com_tasawr_standupmanager_domain_Standup_employees" object="${standup}" z="WhsgT29JsMqT3h1QM3bc6N2lcWg="/>
+        <field:display field="standupUser" id="s_com_tasawr_standupmanager_domain_Standup_standupUser" object="${standup}" z="KWQA+MifrPrx+tnZQOViPjPTvck="/>
+        <field:display field="standupConductor" id="s_com_tasawr_standupmanager_domain_Standup_standupConductor" object="${standup}" z="gaqf776HVrR+h98EUuVQHzj+gAU="/>
+        <field:display field="standupProject" id="s_com_tasawr_standupmanager_domain_Standup_standupProject" object="${standup}" z="WmcLFkcuGkDGTdyZf5yTRe+WiIw="/>
     </page:show>
 </div>

@@ -66,3 +66,12 @@ perform clean
 perform tests
 jpa setup --provider HIBERNATE --database MYSQL --userName ferdous --password f --databaseName tasawr_standup
 perform package
+focus --class ~.domain.Standup
+// [failed] field reference --fieldName standupUser --type ~.domain.Users
+field reference --fieldName standupUser --type ~.domain.Users
+field reference --fieldName standupConductor --type ~.domain.Users
+field reference --fieldName standupProject --type ~.domain.Project
+// [failed] focus --class domain.Project
+focus --class ~.domain.Project
+field reference --fieldName projectUser --type ~.domain.Users
+field set --fieldName projects --type ~.domain.Project --cardinality MANY_TO_MANY --class ~.domain.Users

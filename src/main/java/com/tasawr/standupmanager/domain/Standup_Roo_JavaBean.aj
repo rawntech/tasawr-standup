@@ -3,10 +3,10 @@
 
 package com.tasawr.standupmanager.domain;
 
-import com.tasawr.standupmanager.domain.Employee;
+import com.tasawr.standupmanager.domain.Project;
 import com.tasawr.standupmanager.domain.Standup;
+import com.tasawr.standupmanager.domain.Users;
 import java.util.Date;
-import java.util.Set;
 
 privileged aspect Standup_Roo_JavaBean {
     
@@ -16,14 +16,6 @@ privileged aspect Standup_Roo_JavaBean {
     
     public void Standup.setStandup_date(Date standup_date) {
         this.standup_date = standup_date;
-    }
-    
-    public Employee Standup.getConductor() {
-        return this.conductor;
-    }
-    
-    public void Standup.setConductor(Employee conductor) {
-        this.conductor = conductor;
     }
     
     public String Standup.getTodays_work() {
@@ -50,12 +42,28 @@ privileged aspect Standup_Roo_JavaBean {
         this.blocker = blocker;
     }
     
-    public Set<Employee> Standup.getEmployees() {
-        return this.employees;
+    public Users Standup.getStandupUser() {
+        return this.standupUser;
     }
     
-    public void Standup.setEmployees(Set<Employee> employees) {
-        this.employees = employees;
+    public void Standup.setStandupUser(Users standupUser) {
+        this.standupUser = standupUser;
+    }
+    
+    public Users Standup.getStandupConductor() {
+        return this.standupConductor;
+    }
+    
+    public void Standup.setStandupConductor(Users standupConductor) {
+        this.standupConductor = standupConductor;
+    }
+    
+    public Project Standup.getStandupProject() {
+        return this.standupProject;
+    }
+    
+    public void Standup.setStandupProject(Project standupProject) {
+        this.standupProject = standupProject;
     }
     
 }

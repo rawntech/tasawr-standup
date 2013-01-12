@@ -3,9 +3,10 @@
 
 package com.tasawr.standupmanager.domain;
 
-import com.tasawr.standupmanager.domain.EmployeeDataOnDemand;
+import com.tasawr.standupmanager.domain.ProjectDataOnDemand;
 import com.tasawr.standupmanager.domain.Standup;
 import com.tasawr.standupmanager.domain.StandupDataOnDemand;
+import com.tasawr.standupmanager.domain.UsersDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -28,7 +29,10 @@ privileged aspect StandupDataOnDemand_Roo_DataOnDemand {
     private List<Standup> StandupDataOnDemand.data;
     
     @Autowired
-    EmployeeDataOnDemand StandupDataOnDemand.employeeDataOnDemand;
+    UsersDataOnDemand StandupDataOnDemand.usersDataOnDemand;
+    
+    @Autowired
+    ProjectDataOnDemand StandupDataOnDemand.projectDataOnDemand;
     
     public Standup StandupDataOnDemand.getNewTransientStandup(int index) {
         Standup obj = new Standup();

@@ -3,6 +3,7 @@
 
 package com.tasawr.standupmanager.web;
 
+import com.tasawr.standupmanager.domain.Project;
 import com.tasawr.standupmanager.domain.Roles;
 import com.tasawr.standupmanager.domain.Users;
 import com.tasawr.standupmanager.web.UsersController;
@@ -87,6 +88,7 @@ privileged aspect UsersController_Roo_Controller {
     
     void UsersController.populateEditForm(Model uiModel, Users users) {
         uiModel.addAttribute("users", users);
+        uiModel.addAttribute("projects", Project.findAllProjects());
         uiModel.addAttribute("roleses", Roles.findAllRoleses());
     }
     

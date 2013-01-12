@@ -3,8 +3,9 @@
 
 package com.tasawr.standupmanager.web;
 
-import com.tasawr.standupmanager.domain.Employee;
+import com.tasawr.standupmanager.domain.Project;
 import com.tasawr.standupmanager.domain.Standup;
+import com.tasawr.standupmanager.domain.Users;
 import com.tasawr.standupmanager.web.StandupController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -96,7 +97,8 @@ privileged aspect StandupController_Roo_Controller {
     void StandupController.populateEditForm(Model uiModel, Standup standup) {
         uiModel.addAttribute("standup", standup);
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("employees", Employee.findAllEmployees());
+        uiModel.addAttribute("projects", Project.findAllProjects());
+        uiModel.addAttribute("userses", Users.findAllUserses());
     }
     
     String StandupController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

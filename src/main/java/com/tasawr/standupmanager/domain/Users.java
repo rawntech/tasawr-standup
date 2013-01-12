@@ -27,4 +27,7 @@ public class Users {
 
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Roles> roles = new HashSet<Roles>();
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private Set<Project> projects = new HashSet<Project>();
 }
