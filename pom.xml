@@ -469,4 +469,10 @@
             </plugin>
         </plugins>
     </build>
+    <url>http://standup.tasawr.com</url>
+    <description>tasawr standup manager</description>
+    <organization>
+    	<name>Tasawr Interactive</name>
+    	<url>http://tasawr.com</url>
+    </organization>
 </project>

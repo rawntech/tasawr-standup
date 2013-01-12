@@ -59,3 +59,10 @@ field set --fieldName roles --type ~.domain.Roles --cardinality MANY_TO_MANY
 controller scaffold --entity ~.domain.Users --class ~.web.UsersController
 controller scaffold --entity ~.domain.Roles --class ~.web.RolesController
 perform eclipse
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-12 15:31:07
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-12 15:31:30
+perform clean
+perform tests
+jpa setup --provider HIBERNATE --database MYSQL --userName ferdous --password f --databaseName tasawr_standup
+perform package
