@@ -7,6 +7,5 @@
         <field:display field="password" id="s_com_tasawr_standupmanager_domain_Users_password" object="${users}" z="qN0SDKRR4OlQg3kZ974X+7lSAlM="/>
         <field:display field="enabled" id="s_com_tasawr_standupmanager_domain_Users_enabled" object="${users}" z="IYfSrHZiZmBeV+2c8XMDoEo3AkQ="/>
         <field:display field="roles" id="s_com_tasawr_standupmanager_domain_Users_roles" object="${users}" z="GpLSM2C9rNjaBuCD9MMwKvFBii4="/>
-        <field:display field="projects" id="s_com_tasawr_standupmanager_domain_Users_projects" object="${users}" z="fwtgz4GsqZyPuOQekyYvHs5VA1Q="/>
     </page:show>
 </div>

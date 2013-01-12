@@ -6,6 +6,7 @@
         <table:table data="${projects}" id="l_com_tasawr_standupmanager_domain_Project" path="/projects" z="ysisSlf1X1w54bwp1HMduND1iTw=">
             <table:column id="c_com_tasawr_standupmanager_domain_Project_name" property="name" z="Prgh6c+kfhjldjQWYl7EkQ/Dzis="/>
             <table:column id="c_com_tasawr_standupmanager_domain_Project_description" property="description" z="zXY7cPuZREpVllrRqF8clyHBBaw="/>
+            <table:column id="c_com_tasawr_standupmanager_domain_Project_involved_employees" property="involved_employees" z="4aG+1ekvnosN2xjFzs2y7JfW/lg="/>
         </table:table>
     </page:list>
 </div>

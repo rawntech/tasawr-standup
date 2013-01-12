@@ -75,3 +75,4 @@ field reference --fieldName standupProject --type ~.domain.Project
 focus --class ~.domain.Project
 field reference --fieldName projectUser --type ~.domain.Users
 field set --fieldName projects --type ~.domain.Project --cardinality MANY_TO_MANY --class ~.domain.Users
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-12 17:11:08
