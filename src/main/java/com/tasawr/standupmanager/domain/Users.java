@@ -12,11 +12,11 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
+@RooJpaActiveRecord(finders = { "findUsersesByUsernameEquals" })
 public class Users {
 
     @NotNull
-    @Size(min = 3, max = 100)
+    @Size(min = 3, max = 6)
     private String username;
 
     @NotNull

@@ -5,7 +5,7 @@
     <form:create id="fc_com_tasawr_standupmanager_domain_Project" modelAttribute="project" path="/projects" render="${empty dependencies}" z="rRXCiOCScvK1N9h9KaTlLmxMPI8=">
         <field:input field="name" id="c_com_tasawr_standupmanager_domain_Project_name" z="NKAlu6WcRNnncXNUMPLRnFrQBtM="/>
         <field:textarea field="description" id="c_com_tasawr_standupmanager_domain_Project_description" z="d4NT4z2A4Bgbmq7fPfh72HAX4es="/>
-        <field:select field="involved_employees" id="c_com_tasawr_standupmanager_domain_Project_involved_employees" itemValue="id" items="${employees}" multiple="true" path="/employees" z="orzTeQKClKHuMgF9D4vrfps1hwY="/>
+        <field:select field="InvlovedUsers" id="c_com_tasawr_standupmanager_domain_Project_InvlovedUsers" itemValue="id" items="${userses}" multiple="true" path="/userses" z="hCr/uIR33BN+hETpWsPyPuaBrfs="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_tasawr_standupmanager_domain_Project" render="${not empty dependencies}" z="JO6AkgHIsbjBvEZlvNVmmK2awhQ="/>
 </div>

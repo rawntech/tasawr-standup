@@ -3,7 +3,6 @@
 
 package com.tasawr.standupmanager.domain;
 
-import com.tasawr.standupmanager.domain.ProjectDataOnDemand;
 import com.tasawr.standupmanager.domain.Standup;
 import com.tasawr.standupmanager.domain.StandupDataOnDemand;
 import com.tasawr.standupmanager.domain.UsersDataOnDemand;
@@ -30,9 +29,6 @@ privileged aspect StandupDataOnDemand_Roo_DataOnDemand {
     
     @Autowired
     UsersDataOnDemand StandupDataOnDemand.usersDataOnDemand;
-    
-    @Autowired
-    ProjectDataOnDemand StandupDataOnDemand.projectDataOnDemand;
     
     public Standup StandupDataOnDemand.getNewTransientStandup(int index) {
         Standup obj = new Standup();

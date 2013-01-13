@@ -7,6 +7,7 @@ import com.tasawr.standupmanager.domain.Project;
 import com.tasawr.standupmanager.domain.Standup;
 import com.tasawr.standupmanager.domain.Users;
 import java.util.Date;
+import java.util.Set;
 
 privileged aspect Standup_Roo_JavaBean {
     
@@ -58,12 +59,12 @@ privileged aspect Standup_Roo_JavaBean {
         this.standupConductor = standupConductor;
     }
     
-    public Project Standup.getStandupProject() {
-        return this.standupProject;
+    public Set<Project> Standup.getStandupProject() {
+        return this.StandupProject;
     }
     
-    public void Standup.setStandupProject(Project standupProject) {
-        this.standupProject = standupProject;
+    public void Standup.setStandupProject(Set<Project> StandupProject) {
+        this.StandupProject = StandupProject;
     }
     
 }

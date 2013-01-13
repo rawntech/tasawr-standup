@@ -4,6 +4,8 @@
 package com.tasawr.standupmanager.domain;
 
 import com.tasawr.standupmanager.domain.Project;
+import com.tasawr.standupmanager.domain.Users;
+import java.util.Set;
 
 privileged aspect Project_Roo_JavaBean {
     
@@ -21,6 +23,14 @@ privileged aspect Project_Roo_JavaBean {
     
     public void Project.setDescription(String description) {
         this.description = description;
+    }
+    
+    public Set<Users> Project.getInvlovedUsers() {
+        return this.InvlovedUsers;
+    }
+    
+    public void Project.setInvlovedUsers(Set<Users> InvlovedUsers) {
+        this.InvlovedUsers = InvlovedUsers;
     }
     
 }

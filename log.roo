@@ -76,3 +76,17 @@ focus --class ~.domain.Project
 field reference --fieldName projectUser --type ~.domain.Users
 field set --fieldName projects --type ~.domain.Project --cardinality MANY_TO_MANY --class ~.domain.Users
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-12 17:11:08
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-13 12:52:05
+focus --class ~.domain.Project
+field set --fieldName InvlovedUsers --type ~.domain.Users
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-13 13:30:14
+focus --class ~.domain.Standup
+field set --fieldName StandupProject --type ~.domain.Project
+focus --class ~.domain.Users
+finder list
+finder add --finderName findUsersesByUsernameEquals
+quit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-13 14:09:30
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-13 14:09:39
+perform clean
+perform eclipse

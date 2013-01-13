@@ -3,9 +3,10 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_tasawr_standupmanager_domain_Users" modelAttribute="users" path="/userses" versionField="Version" z="eMuLfQNzPyYqYOsK5M0l7gX6MeE=">
-        <field:textarea field="username" id="c_com_tasawr_standupmanager_domain_Users_username" required="true" z="Gc+RiW8Y0GSToh0msGFQuHvOVxM="/>
+        <field:input field="username" id="c_com_tasawr_standupmanager_domain_Users_username" max="6" min="3" required="true" z="302DMDC9QVMjAj8GsMl5yLwNA9M="/>
         <field:textarea field="password" id="c_com_tasawr_standupmanager_domain_Users_password" required="true" z="dF5KhwmXXUdJzbU8DyQpAYPxJL4="/>
         <field:checkbox field="enabled" id="c_com_tasawr_standupmanager_domain_Users_enabled" z="7uIu6PCcW0iFkXsu/rx0Dh/reKk="/>
         <field:select field="roles" id="c_com_tasawr_standupmanager_domain_Users_roles" itemValue="id" items="${roleses}" multiple="true" path="/roleses" z="cRKSnAO8TVTmqCV/LUixkIsu0Lk="/>
+        <field:select field="projects" id="c_com_tasawr_standupmanager_domain_Users_projects" itemValue="id" items="${projects}" multiple="true" path="/projects" z="AZSw5Tq+SGvv8pYCXk/mkBVh0es="/>
     </form:update>
 </div>

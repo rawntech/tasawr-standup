@@ -3,7 +3,6 @@
 
 package com.tasawr.standupmanager.web;
 
-import com.tasawr.standupmanager.domain.Employee;
 import com.tasawr.standupmanager.domain.Project;
 import com.tasawr.standupmanager.domain.Roles;
 import com.tasawr.standupmanager.domain.Standup;
@@ -16,30 +15,6 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
-    
-    public Converter<Employee, String> ApplicationConversionServiceFactoryBean.getEmployeeToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.tasawr.standupmanager.domain.Employee, java.lang.String>() {
-            public String convert(Employee employee) {
-                return new StringBuilder().append(employee.getName()).append(' ').append(employee.getEmail()).append(' ').append(employee.getDesignation()).append(' ').append(employee.getAddress()).toString();
-            }
-        };
-    }
-    
-    public Converter<Long, Employee> ApplicationConversionServiceFactoryBean.getIdToEmployeeConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.tasawr.standupmanager.domain.Employee>() {
-            public com.tasawr.standupmanager.domain.Employee convert(java.lang.Long id) {
-                return Employee.findEmployee(id);
-            }
-        };
-    }
-    
-    public Converter<String, Employee> ApplicationConversionServiceFactoryBean.getStringToEmployeeConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.tasawr.standupmanager.domain.Employee>() {
-            public com.tasawr.standupmanager.domain.Employee convert(String id) {
-                return getObject().convert(getObject().convert(id, Long.class), Employee.class);
-            }
-        };
-    }
     
     public Converter<Project, String> ApplicationConversionServiceFactoryBean.getProjectToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.tasawr.standupmanager.domain.Project, java.lang.String>() {
@@ -138,9 +113,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
-        registry.addConverter(getEmployeeToStringConverter());
-        registry.addConverter(getIdToEmployeeConverter());
-        registry.addConverter(getStringToEmployeeConverter());
         registry.addConverter(getProjectToStringConverter());
         registry.addConverter(getIdToProjectConverter());
         registry.addConverter(getStringToProjectConverter());

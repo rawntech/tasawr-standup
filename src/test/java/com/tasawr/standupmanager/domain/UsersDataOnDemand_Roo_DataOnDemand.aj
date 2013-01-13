@@ -44,9 +44,9 @@ privileged aspect UsersDataOnDemand_Roo_DataOnDemand {
     }
     
     public void UsersDataOnDemand.setUsername(Users obj, int index) {
-        String username = "username_" + index;
-        if (username.length() > 100) {
-            username = username.substring(0, 100);
+        String username = "user_" + index;
+        if (username.length() > 6) {
+            username = username.substring(0, 6);
         }
         obj.setUsername(username);
     }
